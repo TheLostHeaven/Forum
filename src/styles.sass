@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+  // Tipography and Colors
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code')
+@import './assets/styles/custom-colors'
+
+*
+  font-family: 'Fira Code', monospace
+  margin: 0
+  padding: 0
+
+
+body
+  background-color: var(--background-color)
+  color: var(--text-color)
+
+:root
+  --background-color: #ffffff
+  --text-color: #000000
+
+
+[data-theme="dark"]
+  --background-color: #000000
+  --text-color: #ffffff
+
+
+// Scrollbar
+::-webkit-scrollbar
+    width: 0.4rem
+
+::-webkit-scrollbar-track
+    background: $background-color
+
+
+::-webkit-scrollbar-thumb
+    background: $scroll-bar
+    border-radius: 5px
+
+::-webkit-scrollbar-thumb:hover
+    background: #555
